@@ -9,7 +9,7 @@ const NewsProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchAPI = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=ar&category=${category}&apiKey=${
+      const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
         import.meta.env.VITE_API_KEY
       }`;
 
@@ -28,6 +28,7 @@ const NewsProvider = ({ children }) => {
       value={{
         category,
         handleChangeCategory,
+        news
       }}
     >
       {children}
